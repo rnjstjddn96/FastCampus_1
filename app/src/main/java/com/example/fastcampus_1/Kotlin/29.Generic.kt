@@ -23,7 +23,7 @@ fun main(args:Array<String>){
     //제너릭을 사용하지 않은경우
     var list5 = listOf<Any>(1,2,3,"가") // -> Any 타입
     //부모 : Any
-    //자식 : String, Int , Float
+    //자식 : String, Int , Float.
 
 
 }
