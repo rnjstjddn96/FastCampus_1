@@ -9,8 +9,7 @@ fun main(array: Array<String>) {
     knight.attack(monster)
     monster.attack(knight)
 
-    /*
-    knight.hp = 100
+    /* knight.hp = 100
     //몬스터가 때리지 않아도 기사의 체력을 바꿀수있다 -> 접근수정자로 접근을 제한해야한다.
 
     knight.heal()
@@ -18,34 +17,34 @@ fun main(array: Array<String>) {
      */
 }
 
-class Knight(private var hp: Int, private var power: Int) {
-    fun attack(monster : Monster) {
+//오픈 클래스 knight 와 monster -> Character 클래스
+open class Knight(private var hp: Int, private val power: Int) {
+    fun attack(monster: Monster) {
         monster.defence(power)
     }
 
-    fun defence(damage : Int) {
+    fun defence(damage: Int) {
         hp -= damage
-        if(hp > 0) {
+        if (hp > 0) {
             heal()
             println("기사의 현재 체력은 ${hp}입니다.")
-        }
-        else println("기사가 죽었습니다.")
+        } else println("기사가 죽었습니다.")
     }
 
-    private fun heal(){
+    private fun heal() {
         //공격을 당했을때, 죽지않았을 경우에만 실행
         hp += 3
     }
 }
 
-class Monster(private var hp: Int, private var power: Int) {
-    fun attack(knight : Knight) {
+open class Monster(private var hp: Int, private val power: Int) {
+    fun attack(knight: Knight) {
         knight.defence(power)
     }
 
-    fun defence(damage : Int) {
+    fun defence(damage: Int) {
         hp -= damage
-        if(hp > 0) println("몬스터의 현재 체력은 ${hp}입니다.")
+        if (hp > 0) println("몬스터의 현재 체력은 ${hp}입니다.")
         else println("몬스터가 죽었습니다.")
     }
 }

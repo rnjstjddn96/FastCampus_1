@@ -21,7 +21,10 @@ fun main(array: Array<String>){
 class Reward(){
     private var rewardAmount = 1000
 }
+
+//class의 기본 접근수정자는 private이다
 class TestAccess{
+    //variable, value의 기본 접근수정자는 private가 아니다
     var name : String = "권성우"
 
     constructor(name : String){
