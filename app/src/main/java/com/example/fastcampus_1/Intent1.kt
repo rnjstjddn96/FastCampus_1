@@ -23,7 +23,7 @@ class Intent1 : AppCompatActivity() {
 //            startActivity(intent)
 
 
-            /*
+
             //명시적 인텐트
             val intent2 = Intent(this, Intent2::class.java)
             // apply -> 코드를 읽는 사람이 더 쉽게 이해
@@ -33,11 +33,11 @@ class Intent1 : AppCompatActivity() {
             }
             // startActivity(intent2)// 전달만 하는 요청
             startActivityForResult(intent2, 25) //리턴을 받는 요청
-            */
 
-            //암시적 인텐트
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"))
-            startActivity(intent)
+
+//            //암시적 인텐트
+//            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"))
+//            startActivity(intent)
 
         }
     }
