@@ -1,0 +1,19 @@
+
+
+    03. Intent
+    Intent = 의도, 요구, 의사전달, 요청 등의 의미를 가진다
+    intent를 보낸다 -> 요청을 보낸다
+    - 누가??
+        -> Activity 와 Activity
+        -> Android System 과 나의 APP (전화)
+        -> 다른 APP 과 나의 APP (다른 APP과 연동)
+            - 서로 정한 규약안에서 (무작정 사용할 수 없다 -> 상호합의가 필요하다)
+
+    - 요청의 종류
+        1. 전달만 하는 요청
+        2. Return을 받는 요청
+
+
+    - Intent의 종류
+        1. 명시적 intent -> 정확히 대상에게 요청
+        2. 암시적 intent -> 할 수 있는 대상에게 요청
